@@ -1,7 +1,7 @@
 angular.module('horlogeApp')
   .service('horlogeService', function () {
     // AngularJS will instantiate a singleton by calling "new" on this function
-    var horlogeSrc = '../../img/clock1.png';
+    var horlogeSrc = './img/clock1.png';
 
     return {
         getHorlogeSrc: function () {

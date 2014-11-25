@@ -1,4 +1,3 @@
-'use strict';
 
 angular.module('horlogeApp')
   .controller('GameCtrl', function ($scope, horlogeService) {
@@ -9,7 +8,9 @@ angular.module('horlogeApp')
 			height: 456
 		});
 		
+		var horlogeImageLayer = new Kinetic.Layer();
 		var imageHorloge = new Image();
+
 		imageHorloge.onload = function() {
 			var horloge = new Kinetic.Image({
 				x: 0,
@@ -18,9 +19,9 @@ angular.module('horlogeApp')
 				width: 440,
 			});
 			
-			var horlogeImageLayer = new Kinetic.Layer();
+
 			horlogeImageLayer.add(horloge);
 			scene.add(horlogeImageLayer);
 		};
-		imageHorloge.src = horlogeService.getHorlogeSrc();
+		imageHorloge.src = horlogeService.getHorlogeSrc() ;
 	});
