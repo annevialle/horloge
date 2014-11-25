@@ -1,1 +1,8 @@
-<div class="game"><div id="horloge"></div></div>
+<div class="game">
+<div id="horloge"></div>
+<div ng-controller="game">
+  <form name="formHeure">
+    Heures : <input type="text" name="heures" ng-model="game.heures" required>
+    Minutes : <input type="text" name="minutes" ng-model="game.minutes"
+  </form>
+</div>
